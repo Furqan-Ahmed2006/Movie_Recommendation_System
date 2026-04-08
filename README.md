@@ -40,5 +40,16 @@ Unlike hard-coded basic machine learning structures that crash when asked about 
    Open a secondary terminal:
    ```bash
    streamlit run app.py
-   ```
 
+5. **Architecture Work Flow**   ```
+User
+ ↓
+Streamlit UI
+ ↓
+FastAPI API
+ ↓
+ML Model
+ ↓
+If not found
+ ↓
+TMDB API
