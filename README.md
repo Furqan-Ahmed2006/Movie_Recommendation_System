@@ -42,31 +42,3 @@ Unlike hard-coded basic machine learning structures that crash when asked about 
    streamlit run app.py
    ```
 
-## ☁️ How to Deploy on Render
-
-This project requires **Two separate Web Services** on Render because it models a true microservice architecture. Do not deploy them as a "Background Worker".
-
-### 1. Deploy the Backend (FastAPI)
-1. Go to [Render.com](https://render.com/) -> **New** -> **Web Service**.
-2. Connect your GitHub repository.
-3. Name it something like `movie-backend-api`.
-4. **Environment:** `Python 3`
-5. **Build Command:** `pip install -r requirements.txt`
-6. **Start Command:** `uvicorn api:app --host 0.0.0.0 --port $PORT`
-7. _Wait for it to deploy and copy the live URL (e.g. `https://movie-backend-api.onrender.com`)._
-
-### 2. Connect the UI
-Before deploying the Streamlit UI, edit line 5 of `app.py`:
-Change `API_URL = "http://127.0.0.1:8000/recommend/"` to your new live backend URL:
-`API_URL = "https://movie-backend-api.onrender.com/recommend/"`
-
-### 3. Deploy the Frontend (Streamlit)
-1. Go to **Render.com** -> **New** -> **Web Service**.
-2. Connect the exact same GitHub repository.
-3. Name it something like `movie-frontend-ui`.
-4. **Environment:** `Python 3`
-5. **Build Command:** `pip install -r requirements.txt`
-6. **Start Command:** `streamlit run app.py --server.port $PORT --server.address 0.0.0.0`
-7. **Deploy!**
-
-Your full-stack ML application will now be live on the internet! 
