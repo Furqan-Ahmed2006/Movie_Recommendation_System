@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 st.set_page_config(page_title="Professional Movie Recommender", layout="wide")
 
-API_URL = "http://127.0.0.1:8000/recommend/"
+API_URL = "https://furqan2006-movie-recommendar-api.hf.space/recommend/"
 
 st.title("🎬 Professional Movie Recommendation System")
 st.write("Powered directly by TMDB! Tell us a movie, and we'll instantly search TMDB to give you recommendations.")
