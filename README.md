@@ -17,6 +17,8 @@ Unlike hard-coded basic machine learning structures that crash when asked about 
 - **Infinite Scalability:** Users can request exactly how many recommendations they want (up to 20 per request).
 - **Live Poster Fetching:** Pulls high-quality movie posters globally.
 - **Fail-Safe UX:** Ensures users *never* hit a "Movie Not Found" error for valid titles.
+for Testing Visit
+- 🔗 https://movierecommendationsystem-7ns7k2yiexwpbu82dcfcyp.streamlit.app/
 
 ## 🚀 How to Run Locally
 
